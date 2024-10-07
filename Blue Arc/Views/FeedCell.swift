@@ -10,13 +10,14 @@ import SwiftUI
 struct FeedCell: View {
     var body: some View {
         ZStack {
-            Color.back.ignoresSafeArea()
+            Color.clear.ignoresSafeArea()
             //MARK: Profile pic  / Main Pic / Comment stack
                     VStack {
                         Image("weldpic")
                             .resizable()
                             .scaledToFit()
                             .clipShape(RoundedRectangle.init(cornerRadius: 7))
+                            .frame(width: UIScreen.main.bounds.width * 0.98)
                          
                         Text("Comment...")
                             .foregroundStyle(.gray)
@@ -34,12 +35,12 @@ struct FeedCell: View {
                                     Text("@WeldTactics")
                                         .fontDesign(.serif)
                                         .font(.system(size: 18))
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.primary)
                                         .shadow(color: .black, radius: 5, x: 4, y: 4)
                                     Text("●  Ozark, Mo ● 7 hr. late")
                                         .fontDesign(.serif)
                                         .font(.system(size: 18))
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.primary)
                                         .shadow(color: .black, radius: 5, x: 4, y: 4)
                                 }.padding(.horizontal, 2)
                                 //MARK: Weld Profile Pic
@@ -65,25 +66,26 @@ struct FeedCell: View {
                                                 Spacer()
                                                 HStack{
                                                     Spacer( )
-                                                    VStack {
+                                                    HStack {
                                                         Image(systemName: "bubble.fill")
                                                             .foregroundStyle(.white)
                                                             .font(.system(size: 30))
                                                             .shadow(color: .blue, radius: 4, x: 2, y: 2)
                                                             .padding(.bottom,5)
+                                                        Spacer( )
                                                         Image(systemName: "hand.thumbsup.fill")
                                                             .foregroundStyle(.white)
                                                             .font(.system(size: 30))
                                                             .shadow(color: .blue, radius: 4, x: 2, y: 2)
                                                     }
-                                                    .padding(.bottom, 60).padding(.horizontal, 4)
+                                                    .padding(.bottom, 70).padding(.horizontal, 4)
                                                 }
                                             }
                                         }
                                     }
                                 }
                                 Spacer( )
-                            }.frame(width: UIScreen.main.bounds.width, height: 670)
+                            }.frame(width: UIScreen.main.bounds.width * 0.91, height: 670)
                         }
                     }
                 }

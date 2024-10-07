@@ -10,7 +10,7 @@ import SwiftUI
 struct FeedView: View {
     var body: some View {
         ZStack {
-            Color.back
+            Color.clear
                 .edgesIgnoringSafeArea(.all)
             //   MARK: - Header
             ZStack{

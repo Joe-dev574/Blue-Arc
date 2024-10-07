@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         ZStack {
-            Color.back.ignoresSafeArea()
+            Color.clear.ignoresSafeArea()
             //MARK:  HEADER
             VStack {
                 HStack {
@@ -33,7 +33,7 @@ struct ProfileView: View {
                 ZStack{
                     //MARK:  PROFILE PIC
                     RoundedRectangle(cornerRadius: 7)
-                        .fill( .white)
+                        .fill( .arc)
                         .frame(width: 125, height: 125 )
                     Image("logo")
                         .resizable()
@@ -82,7 +82,7 @@ struct ProfileView: View {
                 VStack {
                     ZStack{
                         RoundedRectangle(cornerRadius: 50)
-                            .fill(Color.white)
+                            .fill(Color.gray)
                             .opacity(0.07)
                             .shadow(radius: 10)
                             .padding(.horizontal)
@@ -93,7 +93,7 @@ struct ProfileView: View {
                                 HStack{
                                     Spacer( )
                                     Text("Collections")
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.primary)
                                         .fontDesign(.serif)
                                         .padding(.leading, 10)
                                     Spacer( )
