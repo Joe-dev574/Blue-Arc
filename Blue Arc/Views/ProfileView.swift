@@ -57,7 +57,7 @@ struct ProfileView: View {
                     //MARK:  FOLLOWERS / FOLLOWING
                     VStack{
                         Text("Followers")
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                             .fontDesign(.serif)
                             .padding(.top, 4)
                         Text("2756")
@@ -66,7 +66,7 @@ struct ProfileView: View {
                     }.padding(.horizontal)
                     VStack{
                         Text("Following")
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                             .fontDesign(.serif)
                             .padding(.top, 4)
                         Text("3716")
@@ -121,12 +121,7 @@ struct ProfileView: View {
                                 }
                             }.padding(.top, -10)
                                 .padding(.horizontal, 25)
-                            HStack(spacing: 7) {
-                                ForEach(1..<7){ x in
-                                    CollectionView(day: x + 12)
-                                }
-                            }.padding(.top, -10)
-                                .padding(.horizontal, 25)
+                           
                             
                             //  MARK:  SEE COLLECTION BUTTON
                             Button{

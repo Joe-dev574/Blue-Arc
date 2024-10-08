@@ -69,44 +69,46 @@ struct FeedView: View {
                     VStack {
                         VStack{
                             HStack{
-                                Image(systemName: "shoeprints.fill")
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                    .foregroundStyle(.white)
-                                Spacer( )
-                                ///TODO:  Animate Logo on Appearance
-                                Image(systemName: "atom")
-                                    .foregroundStyle(.gray)
-                                    .font(.largeTitle)
-                                    .fontWeight(.light)
-                                Text("Blue")
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(.arc)
-                                    .offset(x: 8, y: 1)
-                                Text("Arc")
-                                    .font(.largeTitle)
-                                    .fontWeight(.heavy)
-                                    .foregroundStyle(.white)
-                                
-                                Spacer( )
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 7)
-                                        .fill(Color.arc)
-                                        .frame(width: 38, height: 38)
+                                        .fill(Color.orange)
+                                        .frame(width: 58, height: 58)
                                     Image(systemName: "atom")
                                         .foregroundStyle(.gray)
                                         .font(.largeTitle)
                                         .fontWeight(.light)
                                     VStack{
-                                        Image("weldlogo")
+                                        Image("logo")
                                             .resizable()
-                                            .frame(width: 37, height: 37)
+                                            .frame(width: 57, height: 57)
                                             .clipShape(RoundedRectangle.init(cornerRadius: 12))
                                     }.padding(.horizontal, 4)
                                 }.padding(.horizontal, 4)
+                                Spacer( )
+                                ///TODO:  Animate Logo on Appearance
+                                Image(systemName: "bolt.horizontal")
+                                    .foregroundStyle(.blue)
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .offset(x: 17)
+                                Text("Blue")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.gray)
+                                    .offset(x: 8, y: 1)
+                                Text("Arc")
+                                    .font(.largeTitle)
+                                    .fontWeight(.heavy)
+                                    .foregroundStyle(.primary)
+                                
+                                Spacer( )
+                                Image(systemName: "plus")
+                                    .font(.largeTitle)
+                                    .fontWeight(.light)
+                                    .foregroundStyle(.primary)
                                 
                             }
+                            .padding(.trailing, 10)
                             Spacer()///header:  pushes header to top
                         }
                     }
